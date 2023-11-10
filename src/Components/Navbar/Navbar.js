@@ -16,7 +16,7 @@ export const Navbar = () => {
           <button className="text-black font-inter text-base font-medium tracking-normal leading-none text-center mr-4">
             Logout
           </button>
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row items-center cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -42,7 +42,7 @@ export const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth="2"
               stroke="#000"
-              class="w-6 h-6"
+              className="w-6 h-6"
             >
               <path
                 strokeLinecap="round"
