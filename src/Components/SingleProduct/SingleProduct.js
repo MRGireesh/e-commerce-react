@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Tooltip, Button } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/slices/cartSlice";
 
 export const SingleProduct = () => {
   const product = useSelector((state) => state.products.filteredSingleProduct);
@@ -121,6 +122,19 @@ export const SingleProduct = () => {
                       size="lg"
                       variant="outlined"
                       ripple={true}
+                      onClick={() => {
+                        dispatch(
+                          addToCart({
+                            id: item.id,
+                            name: item.name,
+                            size: size,
+                            price: item.price,
+                            amount: 1,
+                            totalPrice: item.price,
+                            color: color,
+                          })
+                        );
+                      }}
                     >
                       Add to Cart
                     </Button>
