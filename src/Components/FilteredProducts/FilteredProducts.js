@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { filterProducts } from "../../features/slices/productSlice";
 import { Link, useParams } from "react-router-dom";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { useEffect } from "react";
+import { NavigationButtons } from "../NavigationButtons/NavigationButtons";
 
 export const FilteredProducts = () => {
   const dispatch = useDispatch();
@@ -43,6 +43,7 @@ export const FilteredProducts = () => {
             </Link>
           </div>
         </div>
+        <NavigationButtons/>
         <div className="grid grid-cols-1 justify-items-center py-8 gap-12 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           { 
           products

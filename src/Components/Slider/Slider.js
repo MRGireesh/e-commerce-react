@@ -24,7 +24,9 @@ export const Slider = () => {
               }
             >
               <div>
-                {parseInt(item.id) === slideIndex && <img className="h-[850px] w-full"src={item.img}></img>}
+                {parseInt(item.id) === slideIndex && (
+                  <img className="w-full md:h-[850px]" src={item.img}></img>
+                )}
               </div>
               <div className="top-44 absolute mx-auto inset-x-1/4">
                 <div className="text-white font-inter font-bold tracking-normal text-4xl">

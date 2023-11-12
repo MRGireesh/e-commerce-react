@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/src/Components/Navbar/DummyNavbar.js
 /.pnp
 .pnp.js
 
