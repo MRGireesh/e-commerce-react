@@ -6,9 +6,14 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { singleProduct } from "../../features/slices/productSlice";
 
-export const ProductCard = ({ id, name, text, img, price, colors }) => {
+export const ProductCard = ({ id, name, text, img, price, colors , type }) => {
+  const dispatch = useDispatch();
   return (
+    <Link to={"/filteredProducts/"+type+"/"+id} onClick={()=>dispatch(singleProduct(id))}>
     <Card className="w-94 bg-gray-100 ">
       <CardHeader color="blue-gray" className="relative h-96">
         <img src={img} alt="card-image" className="h-full w-full " />
@@ -32,5 +37,6 @@ export const ProductCard = ({ id, name, text, img, price, colors }) => {
         </Typography> 
       </CardFooter>
     </Card>
+    </Link>
   );
 };
