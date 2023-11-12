@@ -132,6 +132,7 @@ export const SingleProduct = () => {
                             amount: 1,
                             totalPrice: item.price,
                             color: color,
+                            img: item.img,
                           })
                         );
                       }}

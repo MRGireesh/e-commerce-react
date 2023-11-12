@@ -3,8 +3,11 @@ import { FilteredProducts } from "./Components/FilteredProducts/FilteredProducts
 import { Main } from "./Components/Main/Main";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SingleProduct } from "./Components/SingleProduct/SingleProduct";
+import { useSelector } from "react-redux";
 
 function App() {
+  const cart = useSelector((state)=>state.cart);
+
   return (
     <div className="App">
       <Router>
